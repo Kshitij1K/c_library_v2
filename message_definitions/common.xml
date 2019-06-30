@@ -5150,5 +5150,11 @@
       <field type="uint8_t" name="count">Number of wheels reported.</field>
       <field type="double[16]" name="distance" units="m">Distance reported by individual wheel encoders. Forward rotations increase values, reverse rotations decrease them. Not all wheels will necessarily have wheel encoders; the mapping of encoders to wheel positions must be agreed/understood by the endpoints.</field>
     </message>
+    <!--Gripper servo control -->
+    <message id="229" name="GRIPPER_SERVO">
+      <description> Send gripper control generated from off board cobntroller to on board Pixhawk</description>
+      <field type="uint64_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
+      <field type="float" name="servo_setpoint">actuator controls</field>
+    </message>
   </messages>
 </mavlink>
