@@ -5156,5 +5156,12 @@
       <field type="uint64_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
       <field type="float" name="servo_setpoint">actuator controls</field>
     </message>
-  </messages>
+
+    <!--Mission Height Setpoint-->
+    <message id="315" name="MISSION_HEIGHT_SETPOINT">
+      <description> Send height setpoint from companion computer to PixHawk </description>
+      <field type="uint64_t" name="time_usec" units="us">Timestamp (synced to UNIX time or since system boot).</field>
+      <field type="float" name="height">height setpoint</field>
+    </message>
+    </messages>
 </mavlink>
